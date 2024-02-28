@@ -8,4 +8,5 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   extra: {
     ...ClientEnv,
   },
+  plugins: ["expo-font"],
 });

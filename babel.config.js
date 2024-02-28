@@ -3,28 +3,30 @@ module.exports = (api) => {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
-      "module-resolver",
-      {
-        root: ["./"],
-        alias: {
-          "@env": "./src/env.js",
-          "@components": "./components/index.ts",
-          "@api": "./api/*",
-          "@state": "./state/*",
-          "@utils": "./utils/*",
+      [
+        "module-resolver",
+        {
+          root: ["./"],
+          alias: {
+            "@env": "./src/env.js",
+            "@components": "./components/index.ts",
+            "@api": "./api/*",
+            "@state": "./state/*",
+            "@utils": "./utils/*",
+          },
+          extensions: [
+            ".ios.ts",
+            ".android.ts",
+            ".ts",
+            ".ios.tsx",
+            ".android.tsx",
+            ".tsx",
+            ".jsx",
+            ".js",
+            ".json",
+          ],
         },
-        extensions: [
-          ".ios.ts",
-          ".android.ts",
-          ".ts",
-          ".ios.tsx",
-          ".android.tsx",
-          ".tsx",
-          ".jsx",
-          ".js",
-          ".json",
-        ],
-      },
+      ],
       "nativewind/babel",
     ],
   };
