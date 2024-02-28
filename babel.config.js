@@ -8,6 +8,10 @@ module.exports = (api) => {
         root: ["./"],
         alias: {
           "@env": "./src/env.js",
+          "@components": "./components/index.ts",
+          "@api": "./api/*",
+          "@state": "./state/*",
+          "@utils": "./utils/*",
         },
         extensions: [
           ".ios.ts",

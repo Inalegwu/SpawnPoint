@@ -13,7 +13,7 @@ require("dotenv").config({
 
 // schema for our client environment to be validated
 const client = v.object({
-  APP_ENV: v.enum(["development", "staging", "production"]),
+  APP_ENV: v.picklist(["development", "staging", "production"]),
   API_URL: v.url(),
 });
 

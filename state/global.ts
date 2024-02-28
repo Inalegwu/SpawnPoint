@@ -1,7 +1,6 @@
 import { observable } from "@legendapp/state";
+import { GlobalState } from "../utils/types";
 
-export const globalState = observable<{
-  theme: "light" | "dark";
-}>({
+export const globalState = observable<GlobalState>({
   theme: "dark",
 });
