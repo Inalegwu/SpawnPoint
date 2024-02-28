@@ -1,4 +1,4 @@
-const v = require("valibot");
+const z = require("zod");
 const path = require("path");
 
 // determine the application environment
@@ -12,12 +12,12 @@ require("dotenv").config({
 });
 
 // schema for our client environment to be validated
-const client = v.object({
-  APP_ENV: v.picklist(["development", "staging", "production"]),
-  API_URL: v.url(),
+const client = z.object({
+  APP_ENV: z.enum(["development", "staging", "production"]),
+  API_URL: z.string().url(),
 });
 
-const buildTime = v.object({});
+const buildTime = z.object({});
 
 /**
  *
@@ -41,10 +41,8 @@ const _env = {
 
 // merge both our environments and ensure the match the
 // merged _env above
-const merged = v.merge(buildTime, client);
-const parsed = v.safeParse(merged, _env, {
-  abortEarly: true,
-});
+const merged = buildTime.merge(client);
+const parsed = merged.safeParse(_env);
 
 // if the parsing fails ,
 // some environment variables are missing
@@ -53,7 +51,7 @@ if (!parsed.success) {
   // verbose error message to allow the error to be solved easily
   console.error(
     "❌ Invalid Environment Variables",
-    parsed.issues,
+    parsed.error.flatten().fieldErrors,
     `\n ❌ Missing Variables in .env.${APP_ENV} file , make sure all required variables are defined in the .env.${APP_ENV} file `,
     `\n 💡 Tip : If you recently updated the .env.${APP_ENV} and the error still persists , try restarting the sever with the -cc flag to clear the cache`,
   );
@@ -67,7 +65,7 @@ if (!parsed.success) {
 // the successful output of parsing
 const Env = parsed.output;
 // parse our client environment
-const ClientEnv = v.parse(client, _clientEnv);
+const ClientEnv = client.parse(_clientEnv);
 
 // make available for use
 module.exports = {

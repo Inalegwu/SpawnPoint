@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "baseUrl": ".",
+    "paths": {
+      "@env": ["./env.js"],
+      "@utils": ["./utils/*"],
+      "@api": ["./api/*"],
+      "@components": ["./components/*"],
+      "@state":["./state/*"],
+    }
+  },
+  "extends": "expo/tsconfig.base"
+}
