@@ -1,0 +1,35 @@
+{
+  "name": "spawnpoint",
+  "description": "SpawnPoint for new React Native Application",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "EXPO_NO_DOTENV=1 expo start",
+    "start:staging": "APP_ENV=staging bun run start",
+    "build:production": "APP_ENV=production bun run start"
+  },
+  "dependencies": {
+    "@legendapp/state": "^2.1.8",
+    "@tanstack/react-query": "^5.24.1",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "expo": "~50.0.8",
+    "expo-constants": "~15.4.5",
+    "expo-linking": "~6.2.2",
+    "expo-router": "~3.4.7",
+    "expo-status-bar": "~1.11.1",
+    "nativewind": "^2.0.11",
+    "react": "18.2.0",
+    "react-native": "0.73.4",
+    "react-native-safe-area-context": "4.8.2",
+    "react-native-screens": "~3.29.0",
+    "react-query-kit": "^3.1.2",
+    "valibot": "^0.29.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@biomejs/biome": "^1.5.3",
+    "tailwindcss": "3.2.2"
+  },
+  "private": true
+}
