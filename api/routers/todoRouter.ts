@@ -1,9 +1,5 @@
 import { router } from "react-query-kit";
-import type {
-  CreateTodoMutation,
-  DeleteTodoMutation,
-  Todo,
-} from "../../utils/types";
+import type { Todo } from "../../utils/types";
 
 let todos: Todo[] = [
   {
@@ -26,11 +22,11 @@ let todos: Todo[] = [
 // to have more control over your query key which helps with
 // caching 😉
 const todoRouter = router("todos", {
-  getTodos: router.query<Todo[]>({
+  getTodos: router.query({
     fetcher: () => todos,
   }),
-  saveTodo: router.mutation<Todo, CreateTodoMutation>({
-    mutationFn: async (d) => {
+  saveTodo: router.mutation({
+    mutationFn: async (d: { content: string }) => {
       let count = 0;
       return {
         content: d.content,
@@ -39,8 +35,8 @@ const todoRouter = router("todos", {
       };
     },
   }),
-  deleteTodo: router.mutation<Todo[], DeleteTodoMutation>({
-    mutationFn: async (d) => {
+  deleteTodo: router.mutation({
+    mutationFn: async (d: { id: number }) => {
       const deleted = todos.filter((v) => v.id !== d.id);
       return deleted;
     },

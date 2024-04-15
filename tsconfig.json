@@ -11,10 +11,10 @@
     "baseUrl": ".",
     "paths": {
       "@env": ["./env.js"],
-      "@utils": ["./utils/*"],
-      "@api": ["./api/*"],
-      "@components": ["./components/*"],
-      "@state":["./state/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/api/*": ["./api/*"],
+      "@/components/*": ["./components/*"],
+      "@/state": ["./state/index.ts"]
     }
   },
   "extends": "expo/tsconfig.base"

@@ -1,12 +1,12 @@
+import app from "@/api/app";
 import React from "react";
 import { Pressable, Text, View } from "react-native";
-import appRouter from "../api/appRouter";
 
 export default function Page() {
   // fully typesafe queries with an almost trpc
   // like experience.
-  const { data, isLoading } = appRouter.todoRouter.getTodos.useQuery();
-  const { mutate } = appRouter.todoRouter.saveTodo.useMutation();
+  const { data, isLoading } = app.todoRouter.getTodos.useQuery();
+  const { mutate } = app.todoRouter.saveTodo.useMutation();
 
   return (
     <View className="w-full h-screen items-center justify-center p-3 font-bricolage">

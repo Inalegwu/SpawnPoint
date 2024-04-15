@@ -4,9 +4,21 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
-    "start": "EXPO_NO_DOTENV=1 expo start",
-    "start:staging": "APP_ENV=staging bun run start",
-    "build:production": "APP_ENV=production bun run start"
+    "start": "cross-env EXPO_NO_DOTENV=1 expo start",
+    "dev": "npx expo start --dev-client",
+    "android": "cross-env EXPO_NO_DOTENV=1 expo run:android",
+    "ios": "cross-env EXPO_NO_DOTENV=1 expo run:ios",
+    "prebuild": "cross-env EXPO_NO_DOTENV=1 bun expo prebuild",
+    "doctor": "npx expo-doctor@latest",
+    "start:staging": "cross-env APP_ENV=staging bun run start",
+    "prebuild:staging": "cross-env APP_ENV=staging bun run prebuild",
+    "android:staging": "cross-env APP_ENV=staging bun run android",
+    "ios:staging": "cross-env APP_ENV=staging bun run ios",
+    "start:production": "cross-env APP_ENV=production bun run start",
+    "prebuild:production": "cross-env APP_ENV=production bun run prebuild",
+    "android:production": "cross-env APP_ENV=production bun run android",
+    "ios:production": "cross-env APP_ENV=production bun run ios",
+    "lint": "bunx @biomejs/biome check --apply ./src"
   },
   "dependencies": {
     "@legendapp/state": "^2.1.8",
