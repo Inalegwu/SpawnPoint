@@ -1,3 +1,8 @@
+// ! IMPORTANT ensure this file is
+// ! never imported into your main react-native
+// ! code , this might cause an error because
+// ! node standard library packages are used
+// ! here
 const z = require("zod");
 const path = require("path");
 

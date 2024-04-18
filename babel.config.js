@@ -9,9 +9,10 @@ module.exports = (api) => {
           root: ["./"],
           alias: {
             "@env": "./src/env.js",
-            "@/components": "./components/*",
-            "@/api": "./api/*",
-            "@/state": "./state/*",
+            "@state": "./src/state/index.ts",
+            "@/api": "./src/api/*",
+            "@app": "./src/api/app.ts",
+            "@components": "./src/components/index.ts",
             "@/utils": "./utils/*",
           },
           extensions: [

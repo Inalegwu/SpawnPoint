@@ -3,8 +3,13 @@ import { View } from "react-native";
 
 type Props = {
   children: ReactNode;
+  classname?: string;
 };
 
 export default function Container(props: Props) {
-  return <View className="w-full h-screen bg-gray-100">{props.children}</View>;
+  return (
+    <View className={`w-full h-screen bg-black ${props.classname}`}>
+      {props.children}
+    </View>
+  );
 }
