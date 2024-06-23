@@ -22,7 +22,7 @@ Aside from the obivious things like React and React Native and all that comes wi
 
 [Legend State](https://legendapp.com/open-source/state): My state manager of choice for my projects, It was previously [Zustand](https://docs.pmnd.rs/zustand/) but I prefer this for how lightweight and adaptable it is
 
-[Nativewind](https://nativewind.dev/expo): For styling within the project , gives the power and ease of tailwind for mobile developers
+[Shopify Restyle](https://shopify.github.io/restyle): Helping developers create design systems in their applications.
 
 [Biome](https://biomejs.dev): Formatting and Linting courtesy of Biome JS, the project that I consider the future of formatting and linting in the Javascript community
 

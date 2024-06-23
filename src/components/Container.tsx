@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { View } from "react-native";
+import React, { type ReactNode } from "react";
+import { Box } from "./atoms";
 
 type Props = {
   children: ReactNode;
@@ -8,8 +8,14 @@ type Props = {
 
 export default function Container(props: Props) {
   return (
-    <View className={`w-full h-screen bg-black ${props.classname}`}>
+    <Box
+      backgroundColor="background"
+      flex={1}
+      width="100%"
+      alignItems="center"
+      justifyContent="center"
+    >
       {props.children}
-    </View>
+    </Box>
   );
 }

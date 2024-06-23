@@ -1,10 +1,10 @@
 // ! IMPORTANT ensure this file is
 // ! never imported into your main react-native
-// ! code , this might cause an error because
+// ! code, this might cause an error because
 // ! node standard library packages are used
 // ! here
 const z = require("zod");
-const path = require("path");
+const path = require("node:path");
 
 // determine the application environment
 const APP_ENV = process.env.APP_ENV ?? "development";
@@ -19,7 +19,6 @@ require("dotenv").config({
 // schema for our client environment to be validated
 const client = z.object({
   APP_ENV: z.enum(["development", "staging", "production"]),
-  API_URL: z.string().url(),
 });
 
 const buildTime = z.object({});
@@ -30,7 +29,6 @@ const buildTime = z.object({});
  */
 const _clientEnv = {
   APP_ENV,
-  API_URL: process.env.API_URL,
 };
 
 /**
