@@ -14,6 +14,7 @@ export default function Container(props: Props) {
       width="100%"
       alignItems="center"
       justifyContent="center"
+      paddingHorizontal="s"
     >
       {props.children}
     </Box>

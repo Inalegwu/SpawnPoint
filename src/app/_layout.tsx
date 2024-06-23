@@ -1,3 +1,4 @@
+import qClient from "@/api/config";
 import { enableReactNativeComponents } from "@legendapp/state/config/enableReactNativeComponents";
 import { enableReactTracking } from "@legendapp/state/config/enableReactTracking";
 import { ThemeProvider } from "@shopify/restyle";
@@ -7,7 +8,6 @@ import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import qClient from "../api/config";
 
 enableReactTracking({
   auto: true,

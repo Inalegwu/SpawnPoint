@@ -10,11 +10,11 @@ module.exports = (api) => {
           alias: {
             "@env": "./src/env.js",
             "@state": "./src/state/index.ts",
-            "@/api": "./src/api/*",
+            "@/api": "./src/api",
             "@app": "./src/api/app.ts",
             "@components": "./src/components/index.ts",
             "@atoms": "./src/components/atoms/index.ts",
-            "@/utils": "./src/utils/*",
+            "@/utils": "./src/utils",
             "@theme": "./src/theme/index.ts",
           },
           extensions: [

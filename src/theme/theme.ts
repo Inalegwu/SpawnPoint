@@ -11,7 +11,12 @@ const theme = createTheme({
     background: palette.background,
     foreground: palette.foreground,
   },
-  spacing: {},
+  spacing: {
+    s: normalize(8),
+    m: normalize(16),
+    l: normalize(24),
+    xl: normalize(40),
+  },
   textVariants: {
     defaults: {
       fontFamily: "bricolage",
