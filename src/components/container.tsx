@@ -9,12 +9,12 @@ type Props = {
 export default function Container(props: Props) {
   return (
     <Box
-      backgroundColor="background"
+      backgroundColor="slate50"
       flex={1}
       width="100%"
       alignItems="center"
       justifyContent="center"
-      paddingHorizontal="s"
+      paddingHorizontal={2}
     >
       {props.children}
     </Box>
