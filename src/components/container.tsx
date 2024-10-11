@@ -9,7 +9,7 @@ type Props = {
 export default function Container(props: Props) {
   return (
     <Box
-      backgroundColor="slate50"
+      backgroundColor="zinc100"
       flex={1}
       width="100%"
       alignItems="center"
