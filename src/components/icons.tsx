@@ -10,7 +10,7 @@ type Props = {
 
 const Icon = memo(({ name, color, size }: Props) => {
   const theme = useTheme<Theme>();
-  const vColor = theme.colors[color || "slate50"];
+  const vColor = theme.colors[color || "slate"];
   const vSize = theme.spacing[size || 1];
 
   const LucideIcon = icons[name];
