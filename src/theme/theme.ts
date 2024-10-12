@@ -200,7 +200,7 @@ const theme = createTheme({
     defaults: {
       fontFamily: "bricolage",
       fontSize: normalize(15),
-      color: "foreground",
+      color: "slate900",
     },
   },
 });
