@@ -1,6 +1,6 @@
 import { normalize } from "@/utils/functions";
 import { Text } from "@atoms";
-import { Container } from "@components";
+import { Container, Icon } from "@components";
 import React from "react";
 
 export default function Page() {
@@ -10,6 +10,7 @@ export default function Page() {
       <Text textAlign="center" fontSize={normalize(20)}>
         The Ideal Starting Point for React Native Applications Powered by Expo
       </Text>
+      <Icon name="Clock1" size={10} color="slate700" />
     </Container>
   );
 }
