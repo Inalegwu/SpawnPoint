@@ -23,8 +23,8 @@ export default function Page() {
         activeOpacity={0.3}
         marginTop={4}
       >
-        <Icon name="Clock1" size={3} color="blue600" />
-        <Text color="blue600" fontSize={normalize(13)}>
+        <Icon name="Clock1" size={4} color="blue600" />
+        <Text color="blue600" fontSize={normalize(15)}>
           This is a custom Touchable Opacity
         </Text>
       </TouchableOpacity>
