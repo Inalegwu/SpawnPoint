@@ -198,7 +198,7 @@ const theme = createTheme({
   },
   textVariants: {
     defaults: {
-      fontFamily: "bricolage",
+      fontFamily: "SFProRoundedSemiBold",
       fontSize: normalize(15),
       color: "slate900",
     },

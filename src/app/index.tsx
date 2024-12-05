@@ -6,8 +6,8 @@ import React from "react";
 export default function Page() {
   return (
     <Container gap={2} alignItems="flex-start" justifyContent="center">
-      <Text fontSize={normalize(24)}>SpawnPoint</Text>
-      <Text fontSize={normalize(20)}>
+      <Text fontSize={normalize(40)}>SpawnPoint</Text>
+      <Text fontSize={normalize(25)}>
         The Ideal Starting Point for React Native Applications Powered by Expo
       </Text>
       <TouchableOpacity

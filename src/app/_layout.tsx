@@ -7,7 +7,6 @@ import { theme } from "@theme";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 enableReactTracking({
   auto: true,
@@ -17,7 +16,15 @@ enableReactNativeComponents();
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
-    bricolage: require("../assets/fonts/bricolage.ttf"),
+    SFProRoundedBlack: require("../assets/fonts/SF-Pro-Rounded-Black.otf"),
+    SFProRoundedBold: require("../assets/fonts/SF-Pro-Rounded-Bold.otf"),
+    SFProRoundedHeavy: require("../assets/fonts/SF-Pro-Rounded-Heavy.otf"),
+    SFProRoundedLight: require("../assets/fonts/SF-Pro-Rounded-Light.otf"),
+    SFProRoundedMedium: require("../assets/fonts/SF-Pro-Rounded-Medium.otf"),
+    SFProRoundedRegular: require("../assets/fonts/SF-Pro-Rounded-Regular.otf"),
+    SFProRoundedSemiBold: require("../assets/fonts/SF-Pro-Rounded-Semibold.otf"),
+    SFProRoundedThin: require("../assets/fonts/SF-Pro-Rounded-Thin.otf"),
+    SFProRoundedUltraLight: require("../assets/fonts/SF-Pro-Rounded-Ultralight.otf"),
   });
 
   if (!fontsLoaded) {
@@ -26,11 +33,9 @@ export default function Layout() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SafeAreaView style={{ flex: 1, width: "100%" }}>
-        <QueryClientProvider client={qClient}>
-          <Slot />
-        </QueryClientProvider>
-      </SafeAreaView>
+      <QueryClientProvider client={qClient}>
+        <Slot />
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }
