@@ -16,6 +16,7 @@ module.exports = (api) => {
             "@atoms": "./src/components/atoms/index.ts",
             "@/utils": "./src/utils",
             "@theme": "./src/theme/index.ts",
+            "@/lib": "./src/lib",
           },
           extensions: [
             ".ios.ts",
