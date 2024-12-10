@@ -15,9 +15,9 @@
       "@state": ["./src/state/index.ts"],
       "@components": ["./src/components/index.ts"],
       "@atoms": ["./src/components/atoms/index.ts"],
+      "@theme": ["./src/theme/index.ts"],
       "@/api/*": ["./src/api/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@theme": ["./src/theme/index.ts"]
+      "@/utils/*": ["./src/utils/*"]
     }
   },
   "extends": "expo/tsconfig.base"

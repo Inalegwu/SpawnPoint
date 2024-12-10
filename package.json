@@ -1,6 +1,6 @@
 {
   "name": "spawnpoint",
-  "description": "SpawnPoint for a new React Native Application powered by Expo",
+  "description": "Starting Point for React Native Applications Powered By Expo",
   "version": "0.0.1",
   "main": "expo-router/entry",
   "scripts": {
