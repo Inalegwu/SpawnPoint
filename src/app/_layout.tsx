@@ -1,4 +1,5 @@
 import qClient from "@/api/config";
+import { StatusBar } from "@components";
 import { enableReactNativeComponents } from "@legendapp/state/config/enableReactNativeComponents";
 import { enableReactTracking } from "@legendapp/state/config/enableReactTracking";
 import { ThemeProvider } from "@shopify/restyle";
@@ -7,6 +8,7 @@ import { theme } from "@theme";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 enableReactTracking({
   auto: true,
@@ -34,7 +36,10 @@ export default function Layout() {
   return (
     <ThemeProvider theme={theme}>
       <QueryClientProvider client={qClient}>
-        <Slot />
+        <SafeAreaView style={{ flex: 1 }}>
+          <StatusBar backgroundColor="zinc100" />
+          <Slot />
+        </SafeAreaView>
       </QueryClientProvider>
     </ThemeProvider>
   );

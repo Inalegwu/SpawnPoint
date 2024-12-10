@@ -1,7 +1,7 @@
-import { useTheme, type ColorProps } from "@shopify/restyle";
+import { type ColorProps, useTheme } from "@shopify/restyle";
 import type { Theme } from "@theme";
 import { icons } from "lucide-react-native";
-import { memo } from "react";
+import React, { memo } from "react";
 
 type Props = {
   name: keyof typeof icons;
