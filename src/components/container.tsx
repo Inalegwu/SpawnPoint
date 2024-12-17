@@ -1,8 +1,8 @@
-import React, { type ReactNode } from "react";
-import { Box } from "./atoms";
-import type { Theme } from "@theme";
 import type { BoxProps } from "@shopify/restyle";
+import type { Theme } from "@theme";
+import React, { type ReactNode } from "react";
 import type { ViewStyle } from "react-native";
+import { Box } from "./atoms";
 
 type Props = BoxProps<Theme> & {
   children: ReactNode;
@@ -11,7 +11,7 @@ type Props = BoxProps<Theme> & {
 
 export default function Container(props: Props) {
   return (
-    <Box backgroundColor="zinc100" padding={3} flex={1} {...props}>
+    <Box backgroundColor="black" flex={1} {...props}>
       {props.children}
     </Box>
   );

@@ -1,8 +1,30 @@
+import { TrendingResponse } from "@/lib/validations";
+import { createFetch, createSchema } from "@better-fetch/fetch";
+import { Env } from "@env";
 import axios from "axios";
-// import {Env} from "@env";
 
-// Create Your API instance using the Environment variables
-// That have been validated
-const client = axios.create();
+const client = axios.create({
+    baseURL:Env.EXPO_PUBLIC_API_URL,
+    headers:{
+        Authorization:`Bearer ${Env.EXPO_PUBLIC_API_TOKEN}`
+    }
+});
+
+const schema=createSchema({
+    "/trending/movie/day":{
+        output:TrendingResponse
+    },
+    "/trending/tv/day":{
+        output:TrendingResponse
+    }
+})
+
+export const fetch$=createFetch({
+    baseURL:Env.EXPO_PUBLIC_API_URL,
+    schema,
+    headers:{
+        authorization:`Bearer ${Env.EXPO_PUBLIC_API_TOKEN}`
+    }
+})
 
 export default client;

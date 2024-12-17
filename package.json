@@ -1,6 +1,6 @@
 {
-  "name": "spawnpoint",
-  "description": "Starting Point for React Native Applications Powered By Expo",
+  "name": "Cine",
+  "description": "The Movie/TV app for enthusiasts",
   "version": "0.0.1",
   "main": "expo-router/entry",
   "scripts": {
@@ -21,6 +21,7 @@
     "lint": "bunx @biomejs/biome check --apply ./src"
   },
   "dependencies": {
+    "@better-fetch/fetch": "^1.1.12",
     "@expo/config-plugins": "^9.0.11",
     "@expo/prebuild-config": "^8.0.21",
     "@legendapp/state": "^2.1.15",

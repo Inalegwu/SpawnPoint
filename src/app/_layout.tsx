@@ -8,7 +8,6 @@ import { theme } from "@theme";
 import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 enableReactTracking({
   auto: true,
@@ -36,10 +35,8 @@ export default function Layout() {
   return (
     <ThemeProvider theme={theme}>
       <QueryClientProvider client={qClient}>
-        <SafeAreaView style={{ flex: 1 }}>
-          <StatusBar backgroundColor="zinc100" />
+         <StatusBar backgroundColor="black" style="light" />
           <Slot />
-        </SafeAreaView>
       </QueryClientProvider>
     </ThemeProvider>
   );

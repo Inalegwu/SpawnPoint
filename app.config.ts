@@ -5,9 +5,9 @@ import pkg from "./package.json";
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: pkg.name,
-  slug: "spawn-point",
+  slug: "cine",
   version: pkg.version,
-  scheme: "com.my_app",
+  scheme: `com.${pkg.name.toLowerCase()}`,
   userInterfaceStyle: "light",
   newArchEnabled: true,
   orientation: "portrait",
@@ -16,7 +16,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     image: "./assets/splash.png",
     resizeMode: "contain",
     backgroundColor: "#ffffff",
-    imageWidth: 100,
+    imageWidth: 60,
   },
   assetBundlePatterns: ["**/*"],
   ios: {
