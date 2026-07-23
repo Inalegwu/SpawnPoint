@@ -1,13 +1,8 @@
-import { z } from "zod";
-import { TrendingResponse } from "./lib/validations";
-
 declare global {
   export type GlobalState = {
-    theme: "dark" | "light";
+    theme: 'dark' | 'light';
+    toggleTheme: () => void;
   };
-
-  export type TrendingMovieResponse=z.infer<typeof TrendingResponse>
 }
 
-export type { };
-
+export {};

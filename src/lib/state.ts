@@ -1,26 +1,20 @@
-import { observable } from '@legendapp/state';
-import {
-  configureObservablePersistence,
-  persistObservable,
-} from '@legendapp/state/persist';
-import { ObservablePersistAsyncStorage } from '@legendapp/state/persist-plugins/async-storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { create } from 'zustand';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
-configureObservablePersistence({
-  pluginLocal: ObservablePersistAsyncStorage,
-  localOptions: {
-    asyncStorage: {
-      AsyncStorage,
+export const globalState = create<GlobalState>()(
+  persist(
+    (set) => ({
+      theme: 'dark',
+      toggleTheme: () =>
+        set((prev) => ({
+          ...prev,
+          theme: prev.theme === 'dark' ? 'light' : 'dark',
+        })),
+    }),
+    {
+      name: 'global-state',
+      storage: createJSONStorage(() => AsyncStorage),
     },
-  },
-});
-
-const globalState$ = observable<GlobalState>({
-  theme: 'dark',
-});
-
-persistObservable(globalState$, {
-  local: 'global_state',
-});
-
-export default globalState$;
+  ),
+);
