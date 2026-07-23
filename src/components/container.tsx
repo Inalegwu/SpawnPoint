@@ -1,8 +1,8 @@
-import type { BoxProps } from "@shopify/restyle";
-import type { Theme } from "@theme";
-import React, { type ReactNode } from "react";
-import type { ViewStyle } from "react-native";
-import { Box } from "./atoms";
+import type { BoxProps } from '@shopify/restyle';
+import type { ReactNode } from 'react';
+import type { ViewStyle } from 'react-native';
+import type { Theme } from '@/lib/theme';
+import SafeAreaView from './safe-area-view';
 
 type Props = BoxProps<Theme> & {
   children: ReactNode;
@@ -11,8 +11,8 @@ type Props = BoxProps<Theme> & {
 
 export default function Container(props: Props) {
   return (
-    <Box backgroundColor="black" flex={1} {...props}>
+    <SafeAreaView backgroundColor="background" flex={1} {...props}>
       {props.children}
-    </Box>
+    </SafeAreaView>
   );
 }

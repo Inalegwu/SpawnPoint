@@ -1,4 +1,5 @@
-import Box from "./box";
-import Text from "./text";
+import Box from './box';
+import Icon from './icon';
+import Text from './text';
 
-export { Box, Text };
+export { Box, Icon, Text };

@@ -1,10 +1,10 @@
-import { observable } from "@legendapp/state";
+import { observable } from '@legendapp/state';
 import {
   configureObservablePersistence,
   persistObservable,
-} from "@legendapp/state/persist";
-import { ObservablePersistAsyncStorage } from "@legendapp/state/persist-plugins/async-storage";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+} from '@legendapp/state/persist';
+import { ObservablePersistAsyncStorage } from '@legendapp/state/persist-plugins/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 configureObservablePersistence({
   pluginLocal: ObservablePersistAsyncStorage,
@@ -16,11 +16,11 @@ configureObservablePersistence({
 });
 
 const globalState$ = observable<GlobalState>({
-  theme: "dark",
+  theme: 'dark',
 });
 
 persistObservable(globalState$, {
-  local: "global_state",
+  local: 'global_state',
 });
 
 export default globalState$;

@@ -1,28 +1,28 @@
 import {
   type BackgroundColorProps,
   type BorderProps,
-  type LayoutProps,
-  type PositionProps,
-  type ShadowProps,
-  type SpacingProps,
-  type SpacingShorthandProps,
   backgroundColor,
   border,
   composeRestyleFunctions,
+  type LayoutProps,
   layout,
+  type PositionProps,
   position,
+  type ShadowProps,
+  type SpacingProps,
+  type SpacingShorthandProps,
   shadow,
   spacing,
   useRestyle,
-} from "@shopify/restyle";
-import type { Theme } from "@theme";
-import type React from "react";
+} from '@shopify/restyle';
+import type React from 'react';
 import {
   type Insets,
   type LayoutChangeEvent,
   TouchableOpacity as NativeTouchable,
   type ViewStyle,
-} from "react-native";
+} from 'react-native';
+import type { Theme } from '@/lib/theme';
 
 type RestyleProps = SpacingProps<Theme> &
   BorderProps<Theme> &

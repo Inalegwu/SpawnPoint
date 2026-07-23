@@ -3,11 +3,11 @@ import {
   backgroundColor,
   composeRestyleFunctions,
   useRestyle,
-} from "@shopify/restyle";
-import type { Theme } from "@theme";
-import type { StatusBarStyle } from "expo-status-bar";
-import { StatusBar as NativeStatusBar } from "expo-status-bar";
-import { memo } from "react";
+} from '@shopify/restyle';
+import type { StatusBarStyle } from 'expo-status-bar';
+import { StatusBar as NativeStatusBar } from 'expo-status-bar';
+import { memo } from 'react';
+import type { Theme } from '@/lib/theme';
 
 type RestyleProps = BackgroundColorProps<Theme>;
 
