@@ -4,7 +4,7 @@ import { Container } from '@components';
 export default function Page() {
   return (
     <Container gap="l">
-      <Text>Hello world</Text>
+      <Text fontSize={50}>Hello world</Text>
     </Container>
   );
 }

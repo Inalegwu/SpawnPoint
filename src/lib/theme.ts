@@ -79,7 +79,7 @@ const light = createTheme({
   },
   textVariants: {
     defaults: {
-      fontFamily: 'SFProRoundedMedium',
+      fontFamily: 'OnestRegular',
       fontSize: 16,
       color: 'text',
     },

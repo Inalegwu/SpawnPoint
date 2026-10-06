@@ -1,21 +1,35 @@
 {
-	"compilerOptions": {
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"strict": true,
-		"noUncheckedIndexedAccess": true,
-		"strictNullChecks": true,
-		"alwaysStrict": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"ignoreDeprecations": "6.0",
-		"baseUrl": ".",
-		"paths": {
-			"@env": ["./src/env.js"],
-			"@components": ["./src/components/index.ts"],
-			"@atoms": ["./src/components/atoms/index.ts"],
-			"@/lib/*": ["./src/lib/*"]
-		}
-	},
-	"extends": "expo/tsconfig.base"
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@env": [
+        "./src/env.js"
+      ],
+      "@components": [
+        "./src/components/index.ts"
+      ],
+      "@atoms": [
+        "./src/components/atoms/index.ts"
+      ],
+      "@/lib/*": [
+        "./src/lib/*"
+      ]
+    }
+  },
+  "extends": "expo/tsconfig.base",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
 }
