@@ -14,7 +14,7 @@ export default function Layout() {
     OnestExtraLight: require('../assets/fonts/Onest-ExtraLight.ttf'),
     OnestLight: require('../assets/fonts/Onest-Light.ttf'),
     OnestMedium: require('../assets/fonts/Onest-Medium.ttf'),
-    OnesRegular: require('../assets/fonts/Onest-Regular.ttf'),
+    OnestRegular: require('../assets/fonts/Onest-Regular.ttf'),
     OnestSemiBold: require('../assets/fonts/Onest-SemiBold.ttf'),
     OnestThin: require('../assets/fonts/Onest-Thin.ttf'),
   });

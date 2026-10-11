@@ -39,7 +39,7 @@ export const dark = createTheme({
   textVariants: {
     defaults: {
       color: 'text',
-      fontFamily: 'JetBrainsMono_400Regular',
+      fontFamily: 'OnestRegular',
       fontSize: 14,
     },
     muted: { color: 'textMuted' },
